@@ -1,0 +1,5 @@
+cause,detail
+text digits instead of binary floats,"a value like 0.14186425470242922 is 19 bytes as text, 4 as float32"
+one row per country code,"4,842,625 raw rows on 2013-11-01 collapse to 1,439,982"
+four unused activity columns,"only Internet is needed, SMS and call columns are dropped from the matrix"
+repeated index on every row,"89,245,318 rows each carried a square id and a timestamp, the matrix stores neither because position is the address"

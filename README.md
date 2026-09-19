@@ -48,10 +48,7 @@ src/
   diagnostics.py      error by hour and traffic level, bias, the echo test
   experiment.py       runs the whole study and writes every artefact
 notebooks/
-  milan_traffic_colab.ipynb   the study as run on Colab with a GPU
-tests/
-  test_download_retry.py      downloader resume and failure handling
-  test_pipeline_smoke.py      end to end check of all three models
+  milan_traffic.ipynb         the study as run on Colab with a GPU
 results/                      generated tables and figures
 ```
 
@@ -121,7 +118,7 @@ python src/reduction_chain.py
 
 ### 4. Forecasting experiments
 
-On Colab, open `notebooks/milan_traffic_colab.ipynb`, set the runtime to GPU, point
+On Colab, open `notebooks/milan_traffic.ipynb`, set the runtime to GPU, point
 `DRIVE_DATA` at the uploaded folder and run in order. The full study including the
 five seed repeats takes about fifteen minutes on a T4.
 
@@ -130,13 +127,6 @@ Locally, with PyTorch installed:
 ```bash
 python src/experiment.py            # full staged search then final models
 python src/experiment.py --quick    # short run to check the pipeline works
-```
-
-### Tests
-
-```bash
-python tests/test_download_retry.py
-python tests/test_pipeline_smoke.py
 ```
 
 ## Data handling

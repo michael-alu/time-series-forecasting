@@ -1,0 +1,4 @@
+series,ADF_p,ADF_says_stable,KPSS_p,KPSS_says_stable
+raw,0.0,True,> 0.1,True
+difference,0.0,True,> 0.1,True
+day over day difference,0.0,True,> 0.1,True

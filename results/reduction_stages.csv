@@ -1,0 +1,5 @@
+stage,files,MB,times_smaller
+raw text,62,20804.8,1.0
+daily parquet,62,1654.4,12.6
+one matrix,1,357.1,58.3
+upload folder,4,357.9,58.1

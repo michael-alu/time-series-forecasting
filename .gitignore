@@ -13,3 +13,7 @@ results/timings.csv
 results/tuning_*.csv
 results/predictions.parquet
 results/summary.json
+
+
+*unrun.ipynb
+tests/

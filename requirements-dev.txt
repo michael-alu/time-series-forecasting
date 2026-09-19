@@ -1,0 +1,5 @@
+# Local only, for running the model code outside Colab.
+# The last PyTorch release with x86 macOS wheels.
+-r requirements.txt
+torch==2.2.2
+gdown==6.4.0

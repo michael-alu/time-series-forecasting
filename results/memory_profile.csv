@@ -1,0 +1,7 @@
+approach,peak_MB,seconds,rows,times_smaller
+"1. read it all, default types",627.3,3.91,4842625,1.0
+2. smaller number types,352.0,3.24,4842625,1.8
+3. only the columns we need,138.9,2.1,4842625,4.5
+4. chunked read and add up,402.9,4.93,1439982,1.6
+5. read the shrunk parquet,64.1,0.11,1439982,9.8
+6. one area from the matrix,1.0,0.08,8928,627.3

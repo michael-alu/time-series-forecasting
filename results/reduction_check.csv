@@ -1,0 +1,10 @@
+,value
+intervals,8928.0
+areas,10000.0
+values_stored,89280000.0
+bytes_per_value,4.0
+expected_MB,357.1
+actual_MB,357.1
+overhead_bytes,128.0
+aggregated_rows_observed,89245318.0
+readings_missing_from_source,34682.0
