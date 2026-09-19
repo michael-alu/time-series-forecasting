@@ -28,6 +28,9 @@ ACTIVITY_COLUMNS: list[str] = ["sms_in", "sms_out", "call_in", "call_out", "inte
 
 NUMBER_OF_SQUARES: int = 10000
 
+# The two areas the assignment names alongside the three busiest.
+EXTRA_SQUARES: list[int] = [4159, 4556]
+
 # one reading every 10 minutes
 STEPS_PER_DAY: int = 144
 
