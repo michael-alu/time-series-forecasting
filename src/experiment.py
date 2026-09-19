@@ -13,7 +13,6 @@ from typing import Any
 import matplotlib
 import pandas as pd
 
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 import evaluate
@@ -161,6 +160,12 @@ def save_figures(predictions: pd.DataFrame) -> int:
 
 
 def main() -> None:
+    matplotlib.use("Agg")  # no screen when run as a script
+
+    # Print whole tables. Without max_columns pandas hides columns behind an ellipsis.
+    pd.set_option("display.width", 200)
+    pd.set_option("display.max_columns", None)
+
     parser = argparse.ArgumentParser(description=__doc__)
 
     parser.add_argument(

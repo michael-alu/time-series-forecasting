@@ -50,7 +50,19 @@ def score(actual: np.ndarray, predicted: np.ndarray) -> Scores:
 
 
 def metrics_table(scores_by_model: dict[str, Scores]) -> pd.DataFrame:
-    table = pd.DataFrame(scores_by_model).T
+    """One row per model, best first, ready to paste into the report."""
+
+    # Fixed column order so the headline errors come first and the table reads the
+    # same every run. Without this the dict order decides, and pandas hides the
+    # important columns behind an ellipsis when the frame is wide.
+    columns = [
+        "mean_absolute_error",
+        "root_mean_squared_error",
+        "mean_absolute_percentage_error",
+        "mean_absolute_percentage_error_skipped",
+    ]
+
+    table = pd.DataFrame(scores_by_model).T[columns]
 
     table.index.name = "model"
 

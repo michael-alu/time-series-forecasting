@@ -12,7 +12,6 @@ import numpy as np
 import pandas as pd
 from statsmodels.tsa.stattools import acf, pacf
 
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 
@@ -257,6 +256,8 @@ def daily_shape(series: pd.Series) -> None:
 
 
 def main() -> None:
+    matplotlib.use("Agg")  # no screen when run as a script
+
     pd.set_option("display.width", 160)
     busiest_id = dataset.top_squares(1)[0]
     busiest = dataset.load_series(busiest_id)
