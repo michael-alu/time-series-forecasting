@@ -1,0 +1,9 @@
+# Local environment: download, reduce to parquet, memory profiling, EDA.
+# Model training runs on Google Colab, which already provides torch.
+numpy==1.26.4
+pandas==2.3.3
+pyarrow==24.0.0
+matplotlib==3.10.7
+scikit-learn==1.7.2
+statsmodels==0.14.4
+memory-profiler==0.61.0

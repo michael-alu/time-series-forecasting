@@ -1,0 +1,15 @@
+data/
+logs/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+reports/figures/
+
+# Forecasting outputs come from the Colab run, not from local quick runs
+results/figures/forecast_*.png
+results/metrics_*.csv
+results/timings.csv
+results/tuning_*.csv
+results/predictions.parquet
+results/summary.json
