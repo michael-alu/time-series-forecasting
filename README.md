@@ -201,3 +201,23 @@ vol. 2, 150055, 2015.
 
 [2] Harvard Dataverse, Telecommunications SMS, Call, Internet MI.
 doi:10.7910/DVN/EGZHFV
+
+## Side experiment: a convolutional model
+
+The main study compares three recurrent cells. `src/cnn_test.py` asks a separate
+question: does a dilated causal convolution, which reads the whole window at once
+rather than one step at a time, do any better on the same task?
+
+```bash
+python src/cnn_test.py --data-dir data/processed/colab
+python src/cnn_test.py --data-dir /content/data --quick   # only checks it runs
+```
+
+Nothing in the main pipeline changes. The convolution presents the same interface as
+an RNN layer, so it reuses the existing model wrapper, training loop, scaling and
+metrics, which keeps the comparison fair for the same reason the recurrent comparison
+is fair: only the cell differs. Depth is chosen automatically so the receptive field
+covers the whole input window.
+
+This is an add-on rather than a core contribution, and it is not part of the reported
+results.
